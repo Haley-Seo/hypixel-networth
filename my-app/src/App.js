@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+
+import { useState, useEffect } from 'react';
 import './App.css';
+import Section from './components/Section/Section';
+import Player from './components/Player/Player';
+import AuctionItems from './components/AuctionItems/AuctionItems';
+
+
 
 function App() {
+  const [playerItems, setPlayerItems] = useState([]);
+
+
+  const submitPlayerHandler = () => {
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Player onSubmit={submitPlayerHandler}/>
+      <AuctionItems />
+      <Section />
     </div>
   );
 }
